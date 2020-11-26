@@ -1,0 +1,35 @@
+<header class="p-3 text-uppercase mb-2">
+  <img src="assets/img/profile/perfil.jpg" class="img-fluid"/>
+
+  <hr/>
+
+  <h1>
+    Portafolio<br/>
+    <small>Cristian Cajiao Skarnic</small>
+  </h1>
+
+  <hr/>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="#" [routerLink]="['/home']" routerLinkActive="active">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="#" [routerLink]="['/projects']" routerLinkActive="active">
+          Projects
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <hr/>
+
+  Aquí van los datos de contacto
+
+  <hr/>
+
+  <p>Cristian Cajiao Skarnic, &#169;  {{currentDate.getFullYear()}}</p>
+</header>

@@ -1,0 +1,22 @@
+header {
+  border: 1px solid black;
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+
+      li {
+        a {
+          &.active {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}
