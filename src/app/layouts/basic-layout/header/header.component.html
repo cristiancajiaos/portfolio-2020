@@ -1,15 +1,39 @@
-<header class="p-3 text-uppercase mb-2">
+<header class="text-uppercase mb-2">
   <div class="header-img">
     <img src="assets/img/profile/perfil.jpg" class="img-fluid main-img" />
     <hr />
   </div>
 
-  <h1 class="font-weight-bold mt-0">
-    <img src="assets/img/profile/perfil.jpg" class="main-icon"/>
-    Portafolio<br/>
-    <small class="font-weight-bold">Cristian Cajiao Skarnic</small>
-  </h1>
+  <div class="header-title d-flex justify-content-between align-items-center">
+     <h1 class="font-weight-bold mt-0">
+       <img src="assets/img/profile/perfil.jpg" class="main-icon" />
+       Portafolio<br />
+       <small class="font-weight-bold">Cristian Cajiao Skarnic</small>
+     </h1>
+     <button class="btn navbar-toggle" (click)="toggleCollapse()">
+       <i class="fas fa-bars fa-fw"></i>
+     </button>
+  </div>
 
+  <nav class="navbar-expand-lg">
+    <hr/>
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+      <ul class="mb-0">
+        <li>
+          <a href="#" [routerLink]="['/home']" routerLinkActive="active">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="#" [routerLink]="['/projects']" routerLinkActive="active">
+            Projects
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--
   <hr/>
 
   <nav>
@@ -26,4 +50,5 @@
       </li>
     </ul>
   </nav>
+  -->
 </header>

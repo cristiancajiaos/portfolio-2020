@@ -8,10 +8,19 @@ import { SocialNetwork } from 'src/app/shared/interfaces/social-network';
 })
 export class HeaderComponent implements OnInit {
 
+  isMenuCollapsed: boolean;
+
   constructor() { }
 
   ngOnInit(): void {
-
+    this.isMenuCollapsed = true;
   }
 
+  toggleCollapse(): void {
+    this.isMenuCollapsed = !this.isMenuCollapsed;
+  }
+
+  setCollapsedTrue(): void {
+    this.isMenuCollapsed = true;
+  }
 }

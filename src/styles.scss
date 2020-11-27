@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
 body {
   font-family: 'Heebo', 'Arial', 'sans-serif';
   background-image: linear-gradient(to top left, white, blue);
   background-attachment: fixed;
 }
+
