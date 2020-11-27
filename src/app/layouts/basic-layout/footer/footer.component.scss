@@ -1,4 +1,16 @@
 footer {
   border: 1px solid black;
   font-size: 0.8rem;
+  background-color: white;
+
+  .social-icons {
+    a {
+      color: black;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
 }
