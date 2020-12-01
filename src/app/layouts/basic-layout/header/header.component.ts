@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { SocialNetwork } from 'src/app/shared/interfaces/social-network';
 
 @Component({
@@ -7,7 +7,6 @@ import { SocialNetwork } from 'src/app/shared/interfaces/social-network';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
   isMenuCollapsed: boolean;
 
   constructor() { }

@@ -20,35 +20,16 @@
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
       <ul class="mb-0">
         <li>
-          <a href="#" [routerLink]="['/home']" routerLinkActive="active">
+          <a href="#" [routerLink]="['/home']" routerLinkActive="active" (click)="setCollapsedTrue()">
             Home
           </a>
         </li>
         <li>
-          <a href="#" [routerLink]="['/projects']" routerLinkActive="active">
+          <a href="#" [routerLink]="['/projects']" routerLinkActive="active" (click)="setCollapsedTrue()">
             Projects
           </a>
         </li>
       </ul>
     </div>
   </nav>
-
-  <!--
-  <hr/>
-
-  <nav>
-    <ul>
-      <li>
-        <a href="#" [routerLink]="['/home']" routerLinkActive="active">
-          Home
-        </a>
-      </li>
-      <li>
-        <a href="#" [routerLink]="['/projects']" routerLinkActive="active">
-          Projects
-        </a>
-      </li>
-    </ul>
-  </nav>
-  -->
 </header>
