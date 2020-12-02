@@ -1,10 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+@import './assets/sass/scss/variables';
 
 body {
   font-family: 'Heebo', 'Arial', 'sans-serif';
-  background-image: linear-gradient(to top left, white, blue);
+  // background-image: linear-gradient(to top left, white, $basic-color-1);
+  background: radial-gradient(circle, #fff 1%, lighten($base-color, 40%) 15%, lighten($base-color, 30%) 50%, lighten($base-color, 15%) 70%, $base-color 97%) no-repeat border-box;
   background-attachment: fixed;
 }
 

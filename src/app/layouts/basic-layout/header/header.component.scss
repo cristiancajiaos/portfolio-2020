@@ -1,8 +1,12 @@
+@import '../../../../assets/sass/scss/variables';
+
+
 header {
   position: sticky;
   top: 1rem;
-  background-color: white;
+  background-color: lighten($base-color, 40%);
   width: 100%;
+  box-shadow: 0px 0px 10px darken($base-color, 20%);
 
   @media screen and (max-width: 991px) {
     position: fixed;
@@ -10,15 +14,14 @@ header {
     left: 0;
     z-index: 9999;
     width: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $base-color;
     padding: 1rem 1rem 0.5rem 1rem;
   }
 
   @media screen and (min-width: 992px) {
     padding: 1rem;
-    border: 1px solid black;
+    // border-bottom: 1px solid $base-color;
   }
-
   .header-img {
       @media screen and (max-width: 991px) {
         display: none;
@@ -50,6 +53,8 @@ header {
     }
 
     button {
+      color: $base-color;
+
       @media screen and (min-width: 992px) {
         display: none;
       }
@@ -76,6 +81,7 @@ header {
           font-weight: 100;
 
           &.active {
+            color: $base-color;
             font-weight: bold;
           }
 
