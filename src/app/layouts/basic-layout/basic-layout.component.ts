@@ -7,8 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicLayoutComponent implements OnInit {
 
-  constructor() { }
+  public showUpIcon: boolean;
+  private currentScrollY: number;
+
+  constructor(
+    private window: Window
+  ) { }
 
   ngOnInit(): void {
+    this.onScroll();
+  }
+
+  onScroll(event?: any): void {
+    this.currentScrollY = window.scrollY;
+    this.showUpIcon = this.currentScrollY >= 50 ? true : false;
+  }
+
+  scrollTop(scroll: boolean): void {
+    this.window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }
 }

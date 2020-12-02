@@ -1,0 +1,13 @@
+@import '../../../../assets/sass/scss/variables';
+
+.up-icon {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  background-color: lighten($base-color, 40%);
+  box-shadow: 0px 0px 10px darken($base-color, 20%);
+  cursor: pointer;
+}

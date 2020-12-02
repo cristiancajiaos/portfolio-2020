@@ -1,4 +1,4 @@
-<div class="basic-layout mt-3">
+<div class="basic-layout mt-3" (window:scroll)="onScroll($event)">
   <div class="container">
     <div class="row">
       <div class="col-12 col-lg-4">
@@ -11,3 +11,5 @@
     </div>
   </div>
 </div>
+
+<app-up-icon *ngIf="showUpIcon" (scrollTop)="scrollTop($event)"></app-up-icon>
