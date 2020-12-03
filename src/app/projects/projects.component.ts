@@ -1,3 +1,5 @@
+import { PortfolioElement } from './../shared/interfaces/portfolio-element';
+import { PortfolioService } from './../shared/services/portfolio.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  portfolioElements: PortfolioElement[];
+
+  constructor(
+    private portfolio: PortfolioService
+  ) { }
 
   ngOnInit(): void {
+    this.portfolio.getAllPortfolioElements().subscribe(elements => {
+      this.portfolioElements = elements;
+    });
   }
 
 }

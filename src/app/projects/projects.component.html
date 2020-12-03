@@ -1,9 +1,5 @@
-<p>projects works!</p>
-
- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc arcu, dignissim id aliquet eget, tristique eu
-   turpis. Nunc sagittis scelerisque semper. Duis id massa sed tellus dignissim tristique vel nec sapien. In rutrum
-   metus mi, in euismod ligula accumsan eget. Sed venenatis vestibulum mi, id elementum lorem dapibus tincidunt. Nunc
-   iaculis risus lorem, sit amet pellentesque arcu faucibus sit amet. Aliquam sagittis dapibus ligula, id auctor odio
-   fermentum ut. Aliquam erat volutpat. In hac habitasse platea dictumst. Integer vitae lectus suscipit, pellentesque
-   eros quis, viverra quam. Pellentesque dolor augue, dapibus tincidunt posuere eu, condimentum eu eros. Phasellus
-   pulvinar orci sagittis blandit consequat.</p>
+<div class="row">
+  <div class="col-12 col-lg-6 mb-3" *ngFor="let element of portfolioElements">
+    <img [src]="element.imgUrl" class="img-fluid"/>
+  </div>
+</div>
