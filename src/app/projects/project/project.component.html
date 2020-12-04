@@ -1,0 +1,26 @@
+<div *ngIf="element" class="mb-2">
+  <img [src]="element.imgUrl" class="img-fluid mb-2"/>
+
+  <div class="element-header">
+    <h1 class="font-weight-bold text-uppercase">{{element.title}} <small>({{element.year}})</small></h1>
+  </div>
+
+  <hr/>
+
+  <div class="element-body">
+    <div>
+      <p>Aquí deben ir las herramientas que se usarn en el proyecto</p>
+    </div>
+
+    <p>Aquí debe ir la descripción del proyecto</p>
+  </div>
+
+  <hr/>
+
+  <div class="element-header">
+    <button class="btn btn-primary text-uppercase font-weight-bold" (click)="goBack()">
+      Volver atrás
+    </button>
+  </div>
+</div>
+
