@@ -1,26 +1,30 @@
-<div *ngIf="element" class="mb-2">
-  <img [src]="element.imgUrl" class="img-fluid mb-2"/>
+<section *ngIf="element" class="element mb-2">
+  <img [src]="element.imgUrl" [alt]="element.title" class="img-element img-fluid mb-3"/>
 
-  <div class="element-header">
+  <section class="element-header">
     <h1 class="font-weight-bold text-uppercase">{{element.title}} <small>({{element.year}})</small></h1>
+  </section>
+
+  <div *ngIf="element.sampleUrl">
+    <a class="btn btn-primary btn-block text-uppercase font-weight-bold mb-3" [href]="element.sampleUrl" target="_blank">
+      Ver proyecto
+    </a>
   </div>
 
   <hr/>
 
-  <div class="element-body">
-    <div>
-      <p>Aquí deben ir las herramientas que se usarn en el proyecto</p>
+  <section class="element-body">
+    <div class="project-tools mb-2">
+      <i *ngFor="let tool of element.tools" class="fab fa-fw fa-2x" [ngClass]="tool.icon"
+      title="En este proyecto se usó {{tool.name}}"></i>
     </div>
 
-    <p>Aquí debe ir la descripción del proyecto</p>
-  </div>
+    <p>{{element.description}}</p>
+  </section>
+</section>
 
-  <hr/>
+<hr/>
 
-  <div class="element-header">
-    <button class="btn btn-primary text-uppercase font-weight-bold" (click)="goBack()">
-      Volver atrás
-    </button>
-  </div>
-</div>
-
+<button class="btn btn-danger text-uppercase font-weight-bold text-uppercase font-weight-bold" (click)="goBack()">
+  <i class="fas fa-angle-left fa-fw"></i> Volver atrás
+</button>
