@@ -1,11 +1,16 @@
-<div class="row">
-  <div class="col-12 col-lg-6 mb-3 project-element" *ngFor="let element of portfolioElements">
-    <a href="#" [routerLink]="['/projects/'+element.id]">
-      <div [ngStyle]="{'background-image':'url('+element.imgUrl+')'}" class="background">
-        <div class="text d-flex justify-content-center align-items-center">
-          <span>{{element.title}}</span>
-        </div>
+<section class="projects">
+  <div *ngIf="portfolioElements">
+    <p>Selecciona un proyecto para ver más de él.</p>
+    <div class="row">
+      <div class="col-12 col-lg-6 mb-3 project-element" *ngFor="let element of portfolioElements">
+        <a href="#" [routerLink]="['/projects/'+element.id]">
+          <div [ngStyle]="{'background-image':'url('+element.imgUrl+')'}" class="background">
+            <div class="text d-flex justify-content-center align-items-center">
+              <span>{{element.title}}</span>
+            </div>
+          </div>
+        </a>
       </div>
-    </a>
+    </div>
   </div>
-</div>
+</section>
