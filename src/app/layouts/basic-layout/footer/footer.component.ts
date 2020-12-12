@@ -19,7 +19,7 @@ export class FooterComponent implements OnInit {
       {
         name: 'Sitio web',
         icon: 'fas fa-globe',
-        url: 'https://cealcuadrado.github.io'
+        url: 'https://cristiancajiaos.github.io'
       },
       {
         name: 'Twitter',
