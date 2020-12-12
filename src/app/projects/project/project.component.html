@@ -1,30 +1,41 @@
-<section *ngIf="element" class="element mb-2">
-  <img [src]="element.imgUrl" [alt]="element.title" class="img-element img-fluid mb-3"/>
+<section class="project">
+  <section *ngIf="element; else loading" class="mb-2">
+    <img [src]="element.imgUrl" [alt]="element.title" class="img-element img-fluid mb-3"/>
 
-  <section class="element-header">
-    <h1 class="font-weight-bold text-uppercase">{{element.title}} <small>({{element.year}})</small></h1>
-  </section>
+    <section class="element-header">
+      <h1 class="font-weight-bold text-uppercase">{{element.title}} <small>({{element.year}})</small></h1>
+    </section>
 
-  <div *ngIf="element.sampleUrl">
-    <a class="btn btn-primary btn-block text-uppercase font-weight-bold mb-3" [href]="element.sampleUrl" target="_blank">
-      Ver proyecto
-    </a>
-  </div>
-
-  <hr/>
-
-  <section class="element-body">
-    <div class="project-tools mb-2">
-      <i *ngFor="let tool of element.tools" class="fab fa-fw fa-2x" [ngClass]="tool.icon"
-      title="En este proyecto se usó {{tool.name}}"></i>
+    <div *ngIf="element.sampleUrl">
+      <a class="btn btn-primary btn-block text-uppercase font-weight-bold mb-3" [href]="element.sampleUrl"
+        target="_blank">
+        <i class="fas fa-eye"></i> Probar el proyecto
+      </a>
     </div>
 
-    <p>{{element.description}}</p>
+    <hr />
+
+    <section class="element-body">
+      <div class="project-tools mb-2">
+        <i *ngFor="let tool of element.tools" class="fab fa-fw fa-2x" [ngClass]="tool.icon"
+          ngbTooltip="En este proyecto se usó {{tool.name}}"></i>
+      </div>
+
+      <p>{{element.description}}</p>
+
+      <div *ngIf="element.sampleUrl">
+        <p><strong>Este proyecto está disponible para probar. Haz click en el boton de arriba para ingresar a
+            él.</strong></p>
+      </div>
+    </section>
+
+    <hr />
+
+    <button class="btn btn-danger text-uppercase font-weight-bold text-uppercase font-weight-bold" (click)="goBack()">
+      <i class="fas fa-angle-left fa-fw"></i> Volver atrás
+    </button>
   </section>
+  <ng-template #loading>
+    <p><i class="fas fa-spinner fa-spin fa-fw"></i> Cargando...</p>
+  </ng-template>
 </section>
-
-<hr/>
-
-<button class="btn btn-danger text-uppercase font-weight-bold text-uppercase font-weight-bold" (click)="goBack()">
-  <i class="fas fa-angle-left fa-fw"></i> Volver atrás
-</button>

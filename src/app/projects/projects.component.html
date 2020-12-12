@@ -1,5 +1,5 @@
 <section class="projects">
-  <div *ngIf="portfolioElements">
+  <div *ngIf="portfolioElements; else loading">
     <p>Selecciona un proyecto para ver más de él.</p>
     <div class="row">
       <div class="col-12 col-lg-6 mb-3 project-element" *ngFor="let element of portfolioElements">
@@ -13,4 +13,7 @@
       </div>
     </div>
   </div>
+  <ng-template #loading>
+    <p><i class="fas fa-spinner fa-spin fa-fw"></i> Cargando...</p>
+  </ng-template>
 </section>
