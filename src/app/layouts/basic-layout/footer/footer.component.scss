@@ -9,6 +9,7 @@ footer {
     a {
       color: darken($base-color, 10%);
       text-decoration: none;
+      transition: opacity 0.1s linear;
 
       &:hover {
         opacity: 0.5;

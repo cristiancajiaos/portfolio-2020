@@ -24,7 +24,7 @@ export class FooterComponent implements OnInit {
       {
         name: 'Twitter',
         icon: 'fab fa-twitter',
-        url: 'https://twitter.com/cristiancajiao',
+        url: 'https://twitter.com/cristiancajiaos',
       },
       {
         name: 'LinkedIn',
